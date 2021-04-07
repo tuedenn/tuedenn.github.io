@@ -6,9 +6,10 @@ html {
 
 body {
   box-sizing: border-box;
+  width: 100%;
   height: 100%;
   background-color: #000000;
-  background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-image: radial-gradient(#11581E, #041607), url("./img/noise.webp");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Inconsolata', Helvetica, sans-serif;
@@ -24,7 +25,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-image: url("./img/noise.webp");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -65,7 +66,7 @@ body {
       rgba(32, 128, 32, 0.2) 3%,
       transparent 100%);
   background-repeat: no-repeat;
-  animation: scan 7.5s linear 0s infinite;
+  animation: scan 6s linear 0s infinite;
 }
 
 @keyframes scan {
@@ -77,9 +78,10 @@ body {
   box-sizing: inherit;
   position: absolute;
   height: 100%;
-  width: 1000px;
+ /* width: 100%; */
   max-width: 100%;
-  padding: 4rem;
+  padding: 6vw;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -94,7 +96,6 @@ body {
   content: "> ";
 }
 
-/*
 .input {
   color: rgba(192, 255, 192, 0.8);
   text-shadow:
@@ -105,7 +106,18 @@ body {
 .input::before {
   content: "$ ";
 }
-*/
+
+.list_child {
+  color: rgba(192, 255, 192, 0.8);
+  margin-left: 1.5rem;
+  text-shadow:
+      0 0 1px rgba(51, 255, 51, 0.4),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.list_child::before {
+  content: "[+] ";
+}
 
 a {
   color: #fff;
@@ -120,6 +132,6 @@ a::after {
   content: "]";
 }
 
-.errorcode {
+.title {
   color: white;
 }
